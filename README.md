@@ -135,6 +135,7 @@ models/cats_vs_dogs_cnn.keras
 
 - 상세 문서: [docs/05_app_solution_and_deployment.md](docs/05_app_solution_and_deployment.md)
 - Render 배포 문서: [docs/06_render_deployment_guide.md](docs/06_render_deployment_guide.md)
+- Streamlit 배포 문서: [docs/07_streamlit_deployment_guide.md](docs/07_streamlit_deployment_guide.md)
 - FastAPI 백엔드로 Keras 모델 추론 API 만들기
 - React TypeScript 프론트엔드로 이미지 업로드 앱 만들기
 - Git 관리와 배포 절차 정리
@@ -160,6 +161,13 @@ npm run dev
 
 ```text
 http://localhost:5173
+```
+
+Streamlit 버전 실행:
+
+```powershell
+pip install -r requirements-streamlit.txt
+streamlit run streamlit_app.py
 ```
 
 ## 핵심 개념 정리
