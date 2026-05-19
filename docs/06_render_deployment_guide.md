@@ -27,6 +27,7 @@ https://github.com/whiteVR/ai-image-classification-app
 필수 파일:
 
 ```text
+ .python-version
 render.yaml
 requirements.txt
 app/backend/main.py
@@ -35,6 +36,8 @@ app/frontend/package.json
 models01/mnist_digit_cnn.keras
 models_TFDS_CD_FT/cats_vs_dogs_mobilenetv2_finetuned.keras
 ```
+
+`.python-version`은 Render가 사용할 Python 버전을 고정합니다. TensorFlow는 Python 3.14에서 설치되지 않을 수 있으므로 이 프로젝트는 Python `3.12.7`을 사용합니다.
 
 ## 3. Render에서 배포
 
@@ -127,4 +130,3 @@ git push
 ```
 
 Render가 GitHub push를 감지하면 자동으로 다시 배포합니다.
-
