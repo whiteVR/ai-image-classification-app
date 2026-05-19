@@ -1,8 +1,15 @@
+from pathlib import Path
+
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from .inference import model_status, predict_cat_dog, predict_digit
 
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+FRONTEND_DIST = PROJECT_ROOT / "app" / "frontend" / "dist"
 
 app = FastAPI(
     title="AI Image Classification API",
@@ -70,3 +77,22 @@ async def predict_cats_dogs_endpoint(
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Cats/Dogs 예측 실패: {exc}") from exc
+
+
+if FRONTEND_DIST.exists():
+    app.mount(
+        "/assets",
+        StaticFiles(directory=FRONTEND_DIST / "assets"),
+        name="frontend-assets",
+    )
+
+
+@app.get("/")
+def serve_frontend() -> FileResponse:
+    index_path = FRONTEND_DIST / "index.html"
+    if not index_path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail="프론트엔드 빌드 파일이 없습니다. app/frontend에서 npm run build를 실행하세요.",
+        )
+    return FileResponse(index_path)

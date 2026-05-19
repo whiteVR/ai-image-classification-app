@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ai-image-classification-app
+    env: python
+    plan: starter
+    buildCommand: |
+      python -m pip install --upgrade pip
+      pip install -r requirements.txt
+      cd app/frontend
+      npm install
+      npm run build
+    startCommand: python -m uvicorn app.backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
