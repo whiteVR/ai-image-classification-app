@@ -10,7 +10,6 @@ aivenv/
 
 # Frontend
 node_modules/
-app/frontend/dist/
 app/frontend/.vite/
 app/logs/
 
