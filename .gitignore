@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+aivenv/
+
+# Frontend
+node_modules/
+app/frontend/dist/
+app/frontend/.vite/
+app/logs/
+
+# Large downloaded/raw datasets
+data/tfds/
+data/cats_vs_dogs/
+data/kaggle/
+
+# Local environment files
+.env
+.env.*
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+~$*.docx
+~$*.pptx

@@ -1,0 +1,15 @@
+image_path,prediction,confidence,cat_probability,dog_probability
+data\my_cats_vs_dogs\cat001.jpg,cat,0.998006,0.998006,0.001994
+data\my_cats_vs_dogs\cat002.jpg,cat,0.999892,0.999892,0.000108
+data\my_cats_vs_dogs\cat003.jpg,dog,0.918773,0.081227,0.918773
+data\my_cats_vs_dogs\cat004.jpg,cat,0.999957,0.999957,0.000043
+data\my_cats_vs_dogs\cat005.jpg,cat,0.999939,0.999939,0.000061
+data\my_cats_vs_dogs\cat006.jpg,dog,0.996796,0.003204,0.996796
+data\my_cats_vs_dogs\dog001.jpg,dog,0.974091,0.025909,0.974091
+data\my_cats_vs_dogs\dog002.jpg,dog,0.994632,0.005368,0.994632
+data\my_cats_vs_dogs\dog003.jpg,dog,0.99923,0.00077,0.99923
+data\my_cats_vs_dogs\dog004.jpg,dog,0.926798,0.073202,0.926798
+data\my_cats_vs_dogs\dog005.jpg,dog,0.999937,0.000063,0.999937
+data\my_cats_vs_dogs\dog006.jpg,dog,0.994603,0.005397,0.994603
+data\my_cats_vs_dogs\dog007.jpg,dog,0.995631,0.004369,0.995631
+data\my_cats_vs_dogs\dog008.jpg,dog,0.985235,0.014765,0.985235

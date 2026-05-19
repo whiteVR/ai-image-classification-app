@@ -1,0 +1,2 @@
+image_path,prediction,confidence,cat_probability,dog_probability
+data\my_cats_vs_dogs\cat003.jpg,cat,0.999857,0.999857,0.000143
